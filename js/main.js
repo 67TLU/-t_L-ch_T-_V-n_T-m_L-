@@ -20,7 +20,7 @@ var BOOKING_DATA = {
 var BookingWizard = {
   currentStep: 1, selectedServiceId: 'srv-01',
   selectedCounselorId: 'counselor-01', selectedSlotTime: '',
-  formData: { studentName:'Le Ngoc An', studentEmail:'ngocan@student.edu.vn', topic:'Ap luc hoc tap', notes:'', prepExercise:true },
+  formData: { studentName:'Lê Ngọc An', studentEmail:'ngocan@student.edu.vn', topic:'Áp lực học tập & thi cử cuối kỳ', notes:'', prepExercise:true },
   init: function(){ this.renderServices(); this.renderCounselors(); this.renderTimeSlots(); if(window.lucide) lucide.createIcons(); },
   renderServices: function(){
     var c = document.getElementById('service-options-container'); if(!c) return;
