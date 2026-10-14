@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusMind - Dat lich tu van (Screen 07)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<a class="logo" href="#"><span class="logo-icon"><i data-lucide="heart-handshake" style="width:20px;height:20px"></i></span><span><span class="logo-name">CampusMind</span><span class="logo-sub">Student Wellbeing Hub</span></span></a>
+<nav class="main-nav"><a href="#">Trang chu</a><a href="#">Dich vu</a><a href="#">Tai nguyen</a><a href="#" class="active">Dat lich</a></nav>
+<div class="user-badge"><span class="dot"></span><span>SV. Le Ngoc An (K64)</span></div>
+</div>
+</header>
+<main class="container">
+<section style="text-align:center">
+<span class="page-eyebrow">Slide 07 · Luong dat lich 4 buoc</span>
+<h1 class="page-title font-serif">Dang ky lich tu van tam ly 1-1</h1>
+<p class="page-sub">Quy trinh truc quan, bao mat danh tinh va kiem tra hop le tai cho</p>
+</section>
+<nav class="stepper" aria-label="Tien trinh dat lich">
+<ol>
+<li class="step-item active" id="step-nav-1"><span class="step-number">1</span><span class="step-label">Chon dich vu</span></li>
+<li class="step-line" id="line-1"></li>
+<li class="step-item" id="step-nav-2"><span class="step-number">2</span><span class="step-label">Khung gio</span></li>
+<li class="step-line" id="line-2"></li>
+<li class="step-item" id="step-nav-3"><span class="step-number">3</span><span class="step-label">Thong tin</span></li>
+<li class="step-line" id="line-3"></li>
+<li class="step-item" id="step-nav-4"><span class="step-number">4</span><span class="step-label">Xac nhan</span></li>
+</ol>
+</nav>
+<div class="card">
+<form id="booking-form" novalidate>
+<fieldset id="step-content-1">
+<legend class="font-serif" style="font-size:1.2rem;font-weight:700">Buoc 1: Chon dich vu ban can ho tro</legend>
+<p class="page-sub" style="margin-bottom:1rem">Mien phi danh cho sinh vien Dai hoc Thuy Loi</p>
+<div id="service-options-container"></div>
+<span class="error-msg" id="service-error"></span>
+<div class="actions" style="justify-content:flex-end"><button type="button" class="btn btn-primary" onclick="BookingWizard.goToStep(2)"><span>Tiep tuc: Chon khung gio</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i></button></div>
+</fieldset>
+<fieldset id="step-content-2" class="hidden">
+<legend class="font-serif" style="font-size:1.2rem;font-weight:700">Buoc 2: Chon chuyen gia va khung gio</legend>
+<p class="page-sub" style="margin-bottom:1rem">Chi hien khung gio con trong trong tuan</p>
+<label class="field-label" for="counselor-select">Chuyen vien tu van <span class="req">*</span></label>
+<select id="counselor-select" class="input" onchange="BookingWizard.onCounselorChange()"></select>
+<div style="margin-top:1rem"><label class="field-label">Khung gio kha dung <span class="req">*</span></label>
+<div class="slot-grid" id="time-slots-container"></div>
+<input type="hidden" id="selected-slot" value="">
+<span class="error-msg" id="slot-error"></span></div>
+<div class="actions"><button type="button" class="btn" onclick="BookingWizard.goToStep(1)">Quay lai</button><button type="button" class="btn btn-primary" onclick="BookingWizard.goToStep(3)"><span>Tiep tuc: Nhap thong tin</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i></button></div>
+</fieldset>
+<fieldset id="step-content-3" class="hidden">
+<legend class="font-serif" style="font-size:1.2rem;font-weight:700">Buoc 3: Thong tin ca nhan</legend>
+<p class="page-sub" style="margin-bottom:1rem">Chuyen vien se doc truoc ghi chu de chuan bi tot nhat</p>
+<div class="row2">
+<div><label class="field-label" for="student-name">Ho va ten <span class="req">*</span></label><input id="student-name" class="input" value="Le Ngoc An"><span class="error-msg" id="name-error"></span></div>
+<div><label class="field-label" for="student-email">Email (.edu.vn) <span class="req">*</span></label><input id="student-email" class="input" value="ngocan@student.edu.vn"><span class="error-msg" id="email-error"></span></div>
+</div>
+<div style="margin-top:1rem"><label class="field-label" for="booking-topic">Chu de can tu van <span class="req">*</span></label><input id="booking-topic" class="input" value="Ap luc hoc tap & thi cu cuoi ky"><span class="error-msg" id="topic-error"></span></div>
+<div style="margin-top:1rem"><label class="field-label" for="booking-notes">Mo ta ngan gon</label><textarea id="booking-notes" rows="3" class="input">Dao nay minh thay qua tai voi lich thi va do an, kho tap trung va hay mat ngu...</textarea></div>
+<div class="ai-box" style="margin-top:1rem"><input type="checkbox" id="prep-exercise-checkbox" checked style="margin-top:2px;accent-color:#D79B34"><div><label for="prep-exercise-checkbox" style="font-size:.78rem;font-weight:700"><span class="badge-ai">AI-2</span> Nhan bai tap chuan bi: tho 4-7-8 truoc buoi hen</label><p style="font-size:.72rem;opacity:.75;margin:.25rem 0 0">AI goi y bai tap 5 phut giup ban san sang truoc khi gap chuyen vien.</p></div></div>
+<div class="actions"><button type="button" class="btn" onclick="BookingWizard.goToStep(2)">Quay lai</button><button type="button" class="btn btn-primary" onclick="BookingWizard.validateStep3AndProceed()"><span>Tiep tuc: Xac nhan</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i></button></div>
+</fieldset>
+<fieldset id="step-content-4" class="hidden">
+<legend class="font-serif" style="font-size:1.2rem;font-weight:700">Buoc 4: Kiem tra va xac nhan</legend>
+<p class="page-sub" style="margin-bottom:1rem">Vui long ra soat lai thong tin truoc khi gui</p>
+<div class="summary" id="summary-review-card"></div>
+<div class="commit-box" style="margin-top:1rem"><i data-lucide="shield-check" style="width:18px;height:18px;flex-shrink:0"></i><div><strong>Cam ket bao mat:</strong> Noi dung trao doi duoc bao ve nghiem ngat theo dao duc tham van hoc duong.</div></div>
+<div class="actions"><button type="button" class="btn" onclick="BookingWizard.goToStep(3)">Quay lai sua</button><button type="button" class="btn btn-primary" onclick="BookingWizard.submitBooking()"><i data-lucide="calendar-check" style="width:16px;height:16px"></i><span>Xac nhan gui yeu cau</span></button></div>
+</fieldset>
+</form>
+</div>
+</main>
+<aside id="success-modal" class="modal hidden">
+<div class="modal-card fade-in">
+<div style="width:4rem;height:4rem;border-radius:1rem;background:#D1FAE5;color:#065F46;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center"><i data-lucide="check-circle" style="width:30px;height:30px"></i></div>
+<h2 class="font-serif" style="margin:0 0 .3rem">Dat lich thanh cong!</h2>
+<p style="font-size:.78rem;opacity:.7">Ma lich hen: <strong id="modal-apt-code">APT-1049</strong></p>
+<div class="summary" style="text-align:left;margin:1rem 0"><div><strong>Thoi gian:</strong> <span id="modal-apt-time"></span></div><div><strong>Chuyen vien:</strong> <span id="modal-apt-counselor"></span></div><div style="margin-top:.4rem"><span class="status-pill"><span class="status-dot"></span>Dang cho duyet</span></div></div>
+<div style="display:flex;gap:.6rem"><button class="btn btn-primary" style="flex:1;justify-content:center" onclick="BookingWizard.resetBooking()">Dat tiep</button><button class="btn" onclick="document.getElementById('success-modal').classList.add('hidden')">Dong</button></div>
+</div>
+</aside>
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-brand"><div class="logo"><span class="logo-icon" style="background:rgba(255,255,255,.12)"><i data-lucide="heart-handshake" style="width:20px;height:20px"></i></span><span><span class="logo-name" style="color:#fff">CampusMind</span><span class="logo-sub" style="color:#FCD34D">Student Wellbeing Hub</span></span></div><p>Trung tam tham van tam ly hoc duong - dong hanh cung sinh vien Dai hoc Thuy Loi.</p><p>Phong H-204, Co so chinh · Thu 2 - Thu 7 (8:00 - 17:00)</p></div>
+<div class="footer-col"><h4>Lien ket nhanh</h4><a href="#">Trang chu</a><a href="#">Danh muc dich vu</a><a href="#">Thu vien self-help</a><a href="#">Ho so chuyen vien</a></div>
+<div class="footer-col"><h4>Ho tro khan</h4><p>Duong day nong: <strong style="color:#fff">1900 xxxx</strong> (24/7)</p><p>Email: wellbeing@tlu.edu.vn</p><p>Quy tac bao mat & dao duc tham van</p></div>
+</div>
+<div class="footer-bottom"><span>© 2026 CampusMind · Khoa CNTT - Dai hoc Thuy Loi</span><span class="hl">BTL-02 · Slide 07 (CSE122)</span></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
