@@ -48,5 +48,5 @@ Cách chạy: mở trực tiếp `index.html` bằng Chrome/Edge, hoặc `cd pro
 | Tài liệu | Link |
 |----------|------|
 | Figma thiết kế | https://www.figma.com/design/7aQCa24JmpH54VKF7UsIzE/Untitled?node-id=1-2&t=xFI7dc84jb9yzrBg-1 |
-| Video demo | _(chưa có — dán link vào đây)_ |
-| GitHub repo | _(chưa có — dán link vào đây)_ |
+| Video demo | https://youtube.com/watch?si=JuxuJ2oSF8Ugl4wy&v=KiI7Ndv4HO4&feature=youtu.be |
+| GitHub repo | https://github.com/67TLU/-t_L-ch_T-_V-n_T-m_L-/ |
